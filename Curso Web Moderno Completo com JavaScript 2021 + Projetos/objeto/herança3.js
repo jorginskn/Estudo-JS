@@ -7,6 +7,7 @@ console.log(filha1.corCabelo)
 const filha2 = Object.create(pai,{
     nome:{value: 'Bia', writrable:false, enumerable: true}})
 
+
 console.log(filha2.nome)
 filha2.nome = "Carla"
 console.log(`${filha2.nome} tem cabelo ${filha2.corCabelo}`)
