@@ -19,4 +19,4 @@ class Filho extends Pai {
 
 
 const filho = new Filho
-console.log(Filho)
+console.log(filho)
