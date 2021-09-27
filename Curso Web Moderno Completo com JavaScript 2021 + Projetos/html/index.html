@@ -5,34 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercícios HTML</title>
-</head>
-
+    <title>Minha Primeira pagina</title>
 
 <body>
-    <header>
-        Exercícios HTML
-    </header>
-    <nav>
-        <a href="exercicios/teste.html">00-teste</a>
-    </nav>
-    <section id="conteudo"></section>
-    <footer>
-        <br>
-        Curso de Web moderno
-    </footer>
-    <script>
-        document.querySelectorAll('a').forEach(link => {
-            const conteudo = document.getElementById('conteudo')
+    <h1>Título 1 </h1>
+    <h2>Sub-Título</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, error ea odio delectus in officiis minus ipsa,
+        soluta, neque doloribus sapiente. Fugit magnam sunt quasi, rem reprehenderit accusantium labore? Itaque. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Culpa, debitis iusto. Sint, aut accusamus debitis doloribus
+        fugit esse, asperiores delectus laborum accusantium vitae beatae non quia placeat! A, vero recusandae.</p>
+ 
+   <p> Esse é um texto <strong>Negrito</strong></p>
+   <p> Esse é um texto <i>ITALICO</i></p>
+   <p>Esse é um texto <small>com a tag small</small></p>
+   <p>Esse é um texto <del>Que foi removido</del></p>
+   <p>Esse é um  <ins>Texto que foi inserido</ins></p>
+   <p>Esse é um texto <sub>Texto subscript</sub></p>
+   <p>Esse é um texto <sup>Texto superScript</sup></p>
+   <br>
+   <br>
+
+   <a href="sobre.html">Sobre programador BR</a>
+   <img src="https://images4.alphacoders.com/688/688832.jpg" alt="Sorvete de morango" width=1000 height= 700>
+  
 
 
-            link.onclick = function(e) {
-                e.preventDefault()
-                fetch(link.href)
-                    .then(resp => resp.text())
-                    .then(html => conteudo.innerHTML = html)
-            }
-        })
-    </script>
 </body>
+
 </html>
