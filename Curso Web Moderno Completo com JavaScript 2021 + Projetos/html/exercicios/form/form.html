@@ -1,19 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <style>
+        input,
+        textarea,
+        select {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type=radio],
+        input[type=checkbox] {
+            display: inline;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Formulário</h1>
-    <form action="http://localhost:3003/usuarios" method="POST">
-        <input type="text" name="nome" >
-        <button>Incluir</button>
+    <form method="POST">
+        <input type="hidden" name="id" value="3">
+        <input type="text" name="nome" placeholder="Digite seu nome">
+        <input type="password" name="senha" placeholder="Digite sua senha">
+        <textarea name="bio" cols="30" rows="10"></textarea>
+        <div>
+            <input type="radio" name="tipo" value="admin"> Admin
+            <input type="radio" name="tipo" value="cliente"> Cliente
+            <input type="radio" name="tipo" value="professor"> Professor
+        </div>
+        <div>
+            <input type="checkbox" name="ativo">Ativo
+        </div>
+        <select name="Estado">
+            <option value="">SELECIONE</option>
+            <option value="DF">DF</option>
+            <option value="SP">SP</option>
+            <option value="RJ">RJ</option>
+            <option value="MG">MG</option>
+            <option value="BA">BA</option>
+        </select>
+        <select name="interesses" multiple size="5">
+            <option value="js">Java Script</option>
+            <option value="Java">Java</option>
+            <option value="php">php</option>
+            <option value="Phyton">Phyton</option>
+            <option value="Go">GO</option>
+            <option value="C">C</option>
+        </select>
+        <button formaction="http://localhost:3003/usuarios">Incluir</button>
+        <button formaction="http://localhost:3003/usuarios/3">alterar</button>
 
 
     </form>
-  
+
 </body>
+
 </html>
