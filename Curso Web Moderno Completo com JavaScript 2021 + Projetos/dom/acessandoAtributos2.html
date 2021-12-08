@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <label for="compras">Compras</label>
+        <ul id="compras" destino='escritório' data-urgencia="5">
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartável</li>
+        </ul>
+    </div>
+    <script>
+        const lista = document.querySelector('div ul[destino="escritório"]')
+        console.log('Elemento "ul".......')
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.destino)
+        console.log('getAttribute', lista.getAttribute('destino'))//pega atributos
+        console.log('hasAttribute', lista.hasAttribute('destino'))
+        lista.setAttribute('destino', 'empersa')
+        lista.setAttribute('status', 'aberto')
+        lista.removeAttribute('destino')
+    </script>
+</body>
+
+</html>
